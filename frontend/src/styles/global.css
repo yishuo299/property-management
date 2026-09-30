@@ -1,0 +1,308 @@
+/* ===== 温馨社区风：暖橙 + 浅绿 + 米白 ===== */
+:root {
+  --pm-primary: #ea580c;
+  --pm-primary-light: #fb923c;
+  --pm-primary-soft: #ffedd5;
+  --pm-green: #65a30d;
+  --pm-green-light: #84cc16;
+  --pm-green-soft: #ecfccb;
+  --pm-bg: #fffbf5;
+  --pm-card: #ffffff;
+  --pm-text: #3f3f46;
+  --pm-text-sub: #78716c;
+  --pm-border: #f1e7db;
+  --pm-radius: 14px;
+  --pm-shadow: 0 2px 12px rgba(234, 88, 12, 0.07);
+  --pm-shadow-hover: 0 6px 20px rgba(234, 88, 12, 0.14);
+  --el-color-primary: #ea580c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--pm-bg);
+  color: var(--pm-text);
+  font-size: 14px;
+}
+
+/* 让 Element Plus 主色融入暖橙风 */
+.el-button--primary {
+  --el-button-bg-color: #ea580c;
+  --el-button-border-color: #ea580c;
+  --el-button-hover-bg-color: #fb923c;
+  --el-button-hover-border-color: #fb923c;
+  --el-button-active-bg-color: #c2410c;
+  --el-button-active-border-color: #c2410c;
+}
+
+.el-button--success {
+  --el-button-bg-color: #65a30d;
+  --el-button-border-color: #65a30d;
+  --el-button-hover-bg-color: #84cc16;
+  --el-button-hover-border-color: #84cc16;
+}
+
+.el-tag--primary {
+  --el-tag-bg-color: #ffedd5;
+  --el-tag-border-color: #fdba74;
+  --el-tag-text-color: #c2410c;
+}
+
+.el-radio-button__original-radio:checked + .el-radio-button__inner {
+  background-color: #ea580c;
+  border-color: #ea580c;
+  box-shadow: -1px 0 0 0 #ea580c;
+}
+
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: #ea580c;
+}
+
+/* 卡片与页面块 */
+.page-card {
+  background: var(--pm-card);
+  border-radius: var(--pm-radius);
+  padding: 18px 20px;
+  box-shadow: var(--pm-shadow);
+  border: 1px solid var(--pm-border);
+}
+
+.page-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--pm-text);
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-title::before {
+  content: '';
+  width: 5px;
+  height: 19px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #ea580c, #65a30d);
+}
+
+.page-desc {
+  color: var(--pm-text-sub);
+  font-size: 13px;
+  margin: 0 0 16px 13px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.toolbar .spacer {
+  flex: 1;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  background: var(--pm-card);
+  border-radius: var(--pm-radius);
+  padding: 16px 18px;
+  border: 1px solid var(--pm-border);
+  box-shadow: var(--pm-shadow);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.2s;
+}
+
+.stat-card:hover {
+  box-shadow: var(--pm-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.stat-icon.orange {
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+}
+
+.stat-icon.green {
+  background: linear-gradient(135deg, #a3e635, #65a30d);
+}
+
+.stat-icon.blue {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
+
+.stat-icon.red {
+  background: linear-gradient(135deg, #fb7185, #e11d48);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--pm-text);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--pm-text-sub);
+  margin-top: 4px;
+}
+
+.chart-card {
+  background: var(--pm-card);
+  border-radius: var(--pm-radius);
+  padding: 16px 18px;
+  border: 1px solid var(--pm-border);
+  box-shadow: var(--pm-shadow);
+}
+
+.chart-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--pm-text);
+}
+
+.chart-box {
+  width: 100%;
+  height: 290px;
+}
+
+.el-table th.el-table__cell {
+  background: #fff7ed !important;
+  color: #7c2d12;
+  font-weight: 600;
+}
+
+.el-card,
+.el-dialog {
+  border-radius: var(--pm-radius) !important;
+}
+
+/* 报修卡片（业主端） */
+.repair-card {
+  background: #fff;
+  border: 1px solid var(--pm-border);
+  border-left: 4px solid var(--pm-primary);
+  border-radius: var(--pm-radius);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--pm-shadow);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.repair-card:hover {
+  box-shadow: var(--pm-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.repair-card.done {
+  border-left-color: var(--pm-green);
+}
+
+.repair-card.warn {
+  border-left-color: #e11d48;
+}
+
+.repair-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.repair-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pm-text);
+}
+
+.repair-card-meta {
+  color: var(--pm-text-sub);
+  font-size: 12.5px;
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.empty-tip {
+  text-align: center;
+  color: var(--pm-text-sub);
+  padding: 40px 0;
+}
+
+.notice-item {
+  border: 1px solid var(--pm-border);
+  border-radius: var(--pm-radius);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.notice-item:hover {
+  box-shadow: var(--pm-shadow-hover);
+}
+
+.notice-item.unread {
+  background: #fffdf7;
+  border-color: #fdba74;
+}
+
+.notice-title {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot-unread {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ea580c;
+  display: inline-block;
+}
+
+.notice-body {
+  color: #57534e;
+  margin-top: 8px;
+  line-height: 1.7;
+  font-size: 13.5px;
+  white-space: pre-wrap;
+}

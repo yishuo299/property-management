@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Environment and local runtime files
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+db.sqlite3
+
+# Runtime uploads: keep only the bundled anonymous demo photographs
+backend/media/uploads/*
+!backend/media/uploads/repair_*.jpg
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
